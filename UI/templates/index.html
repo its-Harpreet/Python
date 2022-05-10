@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <h3 class="text-ceter p-3">
+                Quiz Form: Add new Ques
+            </h3>
+            {% include "notify.html" %}
+            <form method ="post" class="card">
+                <div class ="card-body">
+                    <div class="mb-3">
+                        <label for="ques" class="form-label">Quiz Question</label>
+                        <input type="text" class="form-control" id="question" name="question">
+                    </div>
+                    <div class="row">
+                        <div class="mb-3 col-6">
+                            <label for="op-1" class="form-label">Option 1</label>
+                            <input type="text" class="form-control" id="op-1" name="op-1">
+                        </div>    
+                        <div class="mb-3 col-6">
+                            <label for="op-2" class="form-label">Option 2</label>
+                            <input type="text" class="form-control" id="op-2" name="op-2">
+                        </div>
+                    </div>
+                    <div class="row">    
+                        <div class="mb-3 col-6">
+                            <label for="op-3" class="form-label">Option 3</label>
+                            <input type="text" class="form-control" id="op-3" name="op-3">
+                        </div>    
+                        <div class="mb-3 col-6">
+                            <label for="op-4" class="form-label">Option 4</label>
+                            <input type="text" class="form-control" id="op-4" name="op-4">
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="answer" class="form-label">Answer</label>
+                        <input type="text" class="form-control" id="answer" name="answer">
+                    </div>
+                    
+                    <div class="mb-3">
+                        <label for="category" class="form-label">Select a Category</label>
+                        <select  id="category" name="category" class="form-select">
+                            <option value="">Science</option>
+                            <option value="">Maths</option>
+                            <option value="">GK</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-primary">
+                            Submit
+                        </button>
+                    </div>     
+                </div>
+            </form>   
+        </div>
+    </div>
+</div>
+{% endblock %}
+
